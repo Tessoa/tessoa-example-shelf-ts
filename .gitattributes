@@ -1,0 +1,12 @@
+# Text files are stored and checked out with LF: shell scripts need it, and
+# sdk/ is replaced by upgrades with LF files, which would otherwise show up as
+# changed on every line.
+* text=auto eol=lf
+
+# Scenarios compare fixture files byte for byte, so they are never converted.
+tests/fixtures/** -text
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.wasm binary
+*.zip binary
